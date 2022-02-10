@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <style>
+.request_card{
+    display: flex;
+    height:600px;
+    border-style:solid;
+    border-radius:4%;
+    width:800px;
+    margin-left:300px;
+    background-color:white;
+    margin-top:50px;
+}
+select{
+    width: 80%;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  background-color: white;
+}
+.left{
+    margin-top:100px;
+    height:600px;
+    width:400px; 
+}
+.right{
+    margin-left:20px;
+    height:600px;
+    width:400px;
+}
+.left a{
+    display:block;
+    margin-top:50px;
+}
+img{
+    margin-top:-140px;
+}
+.submit{
+    margin-left:60px;
+    text-align: center;
+vertical-align: middle;
+line-height: 50px;
+    height:50px;
+    width:50%;
+    border-style:solid;
+    border-radius:0%;
+    background-color:black;
+    color:white;
+    text-align:center;
+}
+.title{
+    margin-left:100px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    font-size:60;
+}
+button {
+	font-family: 'Asap', sans-serif;
+	cursor: pointer;
+	color: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+	width: 80px;
+	border: 0;
+	padding: 10px 0;			
+	margin-top: 10px;
+	margin-left: -5px;
+	border-radius: 5px;
+	background-color: #0D0121;	
+	transition:background-color 300ms;			
+}
+  button:hover {
+	  background-color: rgba(244, 91, 105, 1);
+  }
+        </style>
+    </head>
+    <body bgcolor=#0D0121>
+        <div class="request_card">
+            <div class="right">
+            <a class="title">
+                <p>WRITE YOUR<br> REQUEST</p>
+            </a>
+            <a class="foto"><img src="/static/foto.svg" width="400" height="600" class="image"></a>
+            </div>
+            <div class="left">
+	    <form action="#" method="post">
+            <a class="actvity">
+            <select name="activity_name">
+                <option value="futboll">futball</option>
+                <option value="basketball">basket</option>
+                <option value="volley">volley</option>
+                <option value="golf">golf</option>
+                </select>
+            </a>
+	    <a class="phone_number">
+		    <select name="phone_name">
+			    <option value="4">option0</option>
+			    <option value="5">option1</option>
+			    <option value="6">option2</option>
+			    <option value="7">option3</option>
+		    </select>
+	    </a>
+            <a class="location">
+            <select name="location_name">
+                <option value="c3">c3</option>
+                <option value="campuss green">cam green</option>
+                <option value="scc">scc</option>
+                <option value="mercator">merc</option>
+                </select>
+            </a>
+            <a class="time">
+            <select name="time_name">
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                </select>
+            </a>
+	    <button>LOG IN</button>
+	    </form>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

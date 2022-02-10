@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        img {
+           border-radius: 6%;
+        }
+        .study{
+           margin-top: 5%;
+           margin-bottom: 20%;
+           margin-right: 5%;
+           margin-left: 23%;
+           width: 800px;
+           height: 400;
+           opacity: 0.5;
+        }
+        .sport{
+           margin-top: 5%;
+           margin-bottom: 20%;
+           margin-right: 5%;
+           margin-left: 5%;
+           width: 800px;
+           height: 400;
+           opacity: 0.5;
+        }
+        .gathering{
+           margin-top: 5%;
+           margin-bottom: 20%;
+           margin-right: 5%;
+           margin-left: 5%;
+           width: 800px;
+           height: 400;
+           opacity: 0.5;
+        }
+        .club{
+           margin-top: 5%;
+           margin-bottom: 20%;
+           margin-right: 23%;
+           margin-left: 5%;
+           width: 800px;
+           height: 400;
+           opacity: 0.5;
+        }
+        .study {
+           position: relative;
+           width: 50%;
+        }
+        .overlay_study{
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           background-color: #27296d;
+           overflow: hidden;
+           width: 112.5%;
+           height: 0;
+           transition: .5s ease;
+        }
+        .study:hover .overlay_study{
+           border-radius: 6%;
+           height: 100%;
+        }
+        .text_study {
+           color: white;
+           font-size: 20px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           -webkit-transform: translate(-50%, -50%);
+           -ms-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+           text-align: center;
+           font-family: Arial, sans-serif;
+           font-weight: 900;
+           font-size: 600%;           
+        }
+        .sport {
+           position: relative;
+           width: 50%;
+        }
+        .overlay_sport {
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           background-color: #9933FF;
+           overflow: hidden;
+           width: 112.5%;
+           height: 0;
+           transition: .5s ease;
+        }
+        .sport:hover .overlay_sport {
+           border-radius: 6%;
+           height: 100%;
+        }
+        .text_sport{
+           color: white;
+           font-size: 20px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           -webkit-transform: translate(-50%, -50%);
+           -ms-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+           text-align: center;
+           font-family: Arial, sans-serif;
+           font-weight: 900;
+           font-size: 600%;           
+        }
+        .gathering {
+           position: relative;
+           width: 50%;
+        }
+        .overlay_gathering {
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           background-color: #0079C7;
+           overflow: hidden;
+           width: 112.5%;
+           height: 0;
+           transition: .5s ease;
+        }
+        .gathering:hover .overlay_gathering {
+           border-radius: 6%;
+           height: 100%;
+        }
+        .text_gathering{
+           color: white;
+           font-size: 20px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           -webkit-transform: translate(-50%, -50%);
+           -ms-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+           text-align: center;
+           font-family: Arial, sans-serif;
+           font-weight: 900;
+           font-size: 600%;           
+        }
+        .club {
+           position: relative;
+           width: 50%;
+        }
+        .overlay_club {
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           background-color: #2500BA;
+           overflow: hidden;
+           width: 112.5%;
+           height: 0;
+           transition: .5s ease;
+        }
+        .club:hover .overlay_club {
+           border-radius: 6%;
+           height: 100%;
+        }
+        .text_club{
+           color: white;
+           font-size: 20px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           -webkit-transform: translate(-50%, -50%);
+           -ms-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+           text-align: center;
+           font-family: Arial, sans-serif;
+           font-weight: 900;
+           font-size: 600%;           
+        }
+        .cursor {
+           overflow: auto;
+           white-space: nowrap;
+        }
+        .cursor a {
+          display: inline-block;
+        }
+nav {
+  margin: 27px auto 0;
+  position: relative;
+  width: 470px;
+  height: 50px;
+  background-color: #180040;
+  border-radius: 8px;
+  font-size: 0;
+}
+nav a {
+  line-height: 50px;
+  height: 100%;
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  transition: all .5s ease 0s;
+  border-radius: 8px;
+}
+.home {
+  width: 100px;
+}
+.about {
+  width: 110px;
+}
+.updates {
+  width: 120px;
+}
+.contact {
+  width: 140px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+  width: 100px;
+  left: 0;
+  background-color: #1abc9c;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+  width: 110px;
+  left: 100px;
+  background-color: #e74c3c;
+}
+nav .start-updates, a:nth-child(3):hover~.animation {
+  width: 120px;
+  left: 210px;
+  background-color: #3498db;
+}
+nav .start-contact, a:nth-child(4):hover~.animation {
+  width: 140px;
+  left: 330px;
+  background-color: #e67e22;
+}
+
+    </style>
+</head>
+<body bgcolor=#0D0121>
+    <nav>
+  <a class="home" href="#">Home</a>
+  <a class="about" href="#">About</a>
+  <a class="updates" href="#">Updates</a>
+  <a class="contact" href="#">Contact</a>
+  <div class="animation start-home"></div>
+</nav>
+    <div class="cursor">
+    <a class="study">
+        <img src="studing.jpg" width="800" height="600" class="image">
+        <div class="overlay_study">
+            <div class="text_study">STUDYING</div>
+        </div>
+    </a>
+    <a class="sport">
+        <img src="sport.jpg" width="800" height="600" class="image">
+        <div class="overlay_sport">
+            <div class="text_sport">SPORTS</div>
+        </div>
+    </a>
+    <a class="gathering">
+        <img src="gathering.jpg" width="800" height="600" class="image">
+        <div class="overlay_gathering">
+            <div class="text_gathering">GATHERINGS</div>
+        </div>
+    </a>
+    <a class="club">
+        <img src="club.jpg" width="800" height="600" class="image">
+        <div class="overlay_club">
+            <div class="text_club">CLUBS</div>
+        </div>
+    </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/9c30a956d1.js" crossorigin="anonymous"></script>
+<style>
+img {
+    position:relative;
+  border-radius: 15px;
+  height:100px;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+button {
+  background-color: #0D0121;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  width: 98%;
+}
+.dropdown_first_content{
+  display: none;
+}
+.dropdown_second_content{
+  display: none;
+}
+.dropdown_third_content{
+  display: none;
+}
+.closebtn{
+    color:#0D0121;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #260066;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border: none;
+  border-top-right-radius: 20px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.closebtn:hover{
+    color:white;
+  }
+.dropdown_first:hover .first {
+  background-color: red;
+}
+.dropdown_second:hover .second {
+  background-color: red;
+}
+.dropdown_third:hover .third {
+  background-color: red;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+  .fa-plus{
+      position:fixed;
+      font-size:40px;
+      color:white;
+      margin-left:80%;
+  }
+  .fa-plus:hover{
+      transform: scale(1.2);
+    }
+  .info_box a{
+      display:inline-block;
+  }
+  .info_box a:hover{
+      transform: scale(1.2);
+  }
+  .name{
+      border:none;
+      border-width:2px;
+      border-radius:15px;
+      background-color:red;
+/*      background-color:red;*/
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+      color:white; 
+      text-align: center;
+      vertical-align: middle;
+      line-height: 90px;
+      width:200px;
+      margin-left:10px;
+      margin-right:10px;
+  }
+  .sport{
+      border:none;
+      border-radius:15px;
+      background-color:#a393eb;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+      text-align: center;
+      vertical-align: middle;
+      line-height: 90px;
+      width:200px;
+      margin-left:10px;
+      margin-right:10px;
+  }
+  .location{
+      border:none;
+      border-radius:15px;
+      background-color:#a393eb;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+      text-align: center;
+      vertical-align: middle;
+      line-height: 90px;
+      width:200px;
+      margin-left:10px;
+      margin-right:10px;
+  }
+  .time{
+      border:none;
+      border-radius:15px;
+      background-color:#a393eb;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+      text-align: center;
+      vertical-align: middle;
+      line-height: 90px;
+      width:200px;
+      margin-left:10px;
+      margin-right:10px;
+  }
+  .profile_photo{
+     border:none;
+      border-radius:15px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+      text-align: center;
+      vertical-align: middle;
+      line-height: 90px;
+      width:80px;
+      margin-left:0px;
+      margin-right:10px;
+  }
+  .info_box{
+      margin-left:10%;
+      margin-top:5%;
+      border-style: solid;
+      border-width: 2px;
+      border-color:#a393eb;
+      border-radius: 15px;
+      width:1050px;
+      height:100px;
+      background-color: #0D0121;
+  }
+  .fa-check-circle{
+        vertical-align: middle; 
+        text-align: center;
+        font-size:40px;
+         color:red;
+  }
+    .fa-check-circle:hover{
+        color:green;
+        transform: scale(1.2);
+  }
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body bgcolor=#0D0121>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="dropdown_first">
+   <button class="first" href="#">FIRST<i class="fa fa-caret-down"></i></button>
+   <div class="dropdown_first_content">
+    <button href="#">Link 1<i class="fa fa-caret-down"></i></button>
+    <button href="#">Link 2<i class="fa fa-caret-down"></i></button>
+    <button href="#">Link 3<i class="fa fa-caret-down"></i></button>
+   </div>
+  </div>
+  <div class="dropdown_second">
+  <button class="second" href="#">SECOND<i class="fa fa-caret-down"></i></button>
+  <div class="dropdown_second_content">
+    <button href="#">Link 1<i class="fa fa-caret-down"></i></button>
+    <button href="#">Link 2<i class="fa fa-caret-down"></i></button>
+    <button href="#">Link 3<i class="fa fa-caret-down"></i></button>
+  </div>
+  </div>
+  <div class="dropdown_third">
+  <button class="third" href="#">THIRD<i class="fa fa-caret-down"></i></button>
+  <div class="dropdown_third_content">
+    <button href="#">Link 1<i class="fa fa-caret-down"></i></button>
+    <button href="#">Link 2<i class="fa fa-caret-down"></i></button>
+    <button href="#">Link 3<i class="fa fa-caret-down"></i></button>
+  </div>
+  </div>
+</div>
+
+<div id="main">
+  <span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; OPTIONS</span>
+  <i class="fa fa-solid fa-plus" type="button"></i>
+  <div class="info_box">
+      <a class="profile_photo"><img src="un.jpg" width="80" height="60" class="image"></a>
+    <a class="name">
+        bering tafa
+    </a>
+    <a class="sport">
+        basketball
+    </a>
+    <a class="location">
+        C3 field
+    </a>
+    <a class="time">
+        12:00 
+    </a>
+    <i class="fas fa-check-circle"></i>
+</div>
+<div class="info_box">
+      <a class="profile_photo"><img src="zineb.jpg" width="80" height="60" class="image"></a>
+    <a class="name">
+        zineb laourzi
+    </a>
+    <a class="sport">
+        futball
+    </a>
+    <a class="location">
+        csc
+    </a>
+    <a class="time">
+        11:00 
+    </a>
+    <i class="fas fa-check-circle"></i>
+</div>
+<div class="info_box">
+      <a class="profile_photo"><img src="arlind.jpg" width="80" height="60" class="image"></a>
+    <a class="name">
+        arlind kacadej
+    </a>
+    <a class="sport">
+        tenis
+    </a>
+    <a class="location">
+        tenis pitch
+    </a>
+    <a class="time">
+        13:00 
+    </a>
+    <i class="fas fa-check-circle"></i>
+</div>
+<div class="info_box">
+      <a class="profile_photo"><img src="mat.jpg" width="80" height="60" class="image"></a>
+    <a class="name">
+        matias merko
+    </a>
+    <a class="sport">
+        murlan
+    </a>
+    <a class="location">
+        bering's room
+    </a>
+    <a class="time">
+        12:00 
+    </a>
+    <i class="fas fa-check-circle"></i>
+</div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+var dropdown = document.getElementsByClassName("first");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+dropdown = document.getElementsByClassName("second");
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+dropdown = document.getElementsByClassName("third");
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+   
+</body>
+</html> 

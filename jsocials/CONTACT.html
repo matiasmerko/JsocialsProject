@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+      body {
+        background-color: #0d0121;
+      }
+      .SQUARE {
+        float: left;
+        width: 190px;
+        height: 200px;
+        outline: 6px solid white;
+        margin: 60px 100px 80px 200px;
+        color: white;
+      }
+      h2 {
+        font-family: cursive;
+        font-size: xx-large;
+        margin-top: 0em;
+        padding: 0px 3px;
+      }
+      p {
+         font-family: cursive;
+        font-size: x-large;
+        margin-bottom: 0em;
+        margin-top: 4em;
+        padding: 15px 10px 1px 10px;
+      }
+      h1 {
+        font-family: cursive;
+        text-align: center;
+        color: #A1A9FE;
+        margin-bottom: 0em;
+        padding: 5px;
+      }
+      .GLOB {
+        display: flex;
+        background-color: #0d0121;
+      }
+      .P1 {
+        float: right;
+        color: white;
+        text-align: left;
+        line-height: 1;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 0em;
+      }
+
+      .list {
+        list-style-type: none;
+        margin-left: 0px;
+        padding-left: 0px;
+        display: inline-block;
+      }
+
+      .list img {
+        float: left;
+        width: 100px;
+        height: 100px;
+      }
+
+      .list p,
+      .list h2 {
+        text-align: right;
+        display: inline-block;
+        padding: 0;
+        font-family: cursive;
+      }
+      .list p {
+        margin-top: 0em;
+        color: #ffcccc;
+      }
+      .list h2 {
+        margin-bottom: 0em;
+        color: #a5bdfd;
+      }
+      .ALL {
+        padding: 30px 0px 20px 10px;
+      }
+      .BOX {
+        border-radius: 5px;
+        background-color: #0d0121;
+        padding: 20px;
+      }
+      input[type="text"] {
+        width: 80%;
+        padding: 12px;
+        border: 1px solid #63c0c4;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        background-color: #d9dad7;
+      }
+      label {
+        color: white;
+        font-family: cursive;
+        font-size: large;
+      }
+      .BOX2 {
+        padding: 0px 30px 30px 180px;
+      }
+      input[type="submit"] {
+        background-color: #63c0c4;
+        color: white;
+        padding: 13px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .SQUAREP{
+        width: 600px;
+        height: 100px;
+        outline: 6px solid #A1A9FE;
+        margin: 6px 10px 8px 20px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="GLOB">
+      <div class="SQUARE">
+        <p>The</p>
+        <h2>TEAM</h2>
+      </div>
+      <div class="P1">
+        <h1>Contact US</h1>
+        <div class = "SQUAREP">
+        <p>
+          while we're good with smoke signals, there are simpler ways for us to
+          get in touch and hear from you.
+        </p>
+        </div>
+      </div>
+    </div>
+    <div class="BOX2">
+      <div class="PNL">
+      <form action="name.php">
+        <label for="fmessage"
+          >Drop a Message
+            <img src="message.jpg" width="25" height="25"/>
+          <br
+        /></label>
+        </div>
+        <input
+          type="text"
+          id="message"
+          name="firstmessage"
+          placeholder=" ✍️Enter your message..."
+        />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <ul class="ALL">
+      <li class="list">
+        <a href=""><img src="contact11.jpg" alt="icon" /></a>
+        <h2>Bering Tafa</h2>
+        <br />
+        <p>JUB CS'23</p>
+      </li>
+      <li class="list">
+        <a href=""><img src="contact44.jpg" alt="icon" /></a>
+        <h2>Matias Merko</h2>
+        <br />
+        <p>JUB CS'23</p>
+      </li>
+      <li class="list">
+       <a href=""><img src="contact44.jpg" alt="icon" /></a>
+        <h2>Zineb Laouzi</h2>
+        <br />
+        <p>JUB CS'23</p>
+      </li>
+      <li class="list">
+        <a href=""><img src="contact33.jpg" alt="icon" /></a>
+        <h2>Arlind Kecadej</h2>
+        <br />
+        <p>JUB CS'23</p>
+      </li>
+    </ul>
+  </body>
+</html>
